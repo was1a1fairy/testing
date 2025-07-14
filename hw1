@@ -4,7 +4,7 @@ def find_substr(text:str, pattern:str) -> int:
 def find_elem(lst: list, value: (int, float)) -> int:
   ...
 
-def count_occurreences(lst: list, value: (int, float)) -> int:
+def count_occurrences(lst: list, value: (int, float)) -> int:
   ...
 
 def reverse_words(s: str) -> str:
