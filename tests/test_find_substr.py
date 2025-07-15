@@ -1,4 +1,5 @@
 import hw1
+import pytest
 
 
 def test_positive_one_entry():
@@ -17,9 +18,9 @@ def test_positive_two_entry():
     result = hw1.find_substr(text, pattern)
     assert result == expected, f"expected: {expected}, result: {result}."
 
-# def test_negative_zero_entry():
-#     text = "мне лень придумывать что писать"
-#     pattern = "класс"
-#     # ошибка
+def test_negative_zero_entry():
+    text = "мне лень придумывать что писать"
+    pattern = "класс"
 
-# positive_two_entry()
+    with pytest.raises(ValueError):
+        hw1.find_substr(text, pattern)

@@ -14,6 +14,12 @@ def find_substr(text:str, pattern:str) -> int:
 
 
 def find_elem(lst: list, value: (int, float)) -> int:
+  """
+
+  :param lst:
+  :param value:
+  :return:
+  """
   ...
 
 def count_occurrences(lst: list, value: (int, float)) -> int:
