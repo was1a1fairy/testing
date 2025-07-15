@@ -22,7 +22,10 @@ def find_elem(lst: list, value: (int, float)) -> int:
   :param value: значение
   :return: индекс
   """
-  ...
+
+  if value not in lst:
+    raise ValueError("value not in lst((")
+  return lst.index(value)
 
 def count_occurrences(lst: list, value: (int, float)) -> int:
   ...
