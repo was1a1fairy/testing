@@ -28,6 +28,14 @@ def find_elem(lst: list, value: (int, float)) -> int:
   return lst.index(value)
 
 def count_occurrences(lst: list, value: (int, float)) -> int:
+  """
+  ищет количество вхождений value в lst
+
+  :param lst: список элементов
+  :param value: искомое значение
+  :return: количество или ошибка
+  """
+
   ...
 
 def reverse_words(s: str) -> str:
