@@ -16,3 +16,9 @@ def positive_two_entry():
 
     result = hw1.find_substr(text, pattern)
     assert result == expected, f"expected: {expected}, result: {result}."
+
+def negative_zero_entry():
+    text = "мне лень придумывать что писать"
+    pattern = "класс"
+    # ошибка
+
