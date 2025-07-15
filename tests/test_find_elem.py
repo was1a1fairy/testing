@@ -26,3 +26,10 @@ def test_positive_diff_types():
 
     result = hw1.find_elem(lst, value)
     assert result == expected, f"expected: {expected}, result: {result}"
+
+def test_negative_zero_entry():
+    lst = [1, 2, 4, 5]
+    value = 3
+
+    with pytest.raises(ValueError):
+        hw1.find_elem(lst, value)
