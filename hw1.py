@@ -25,6 +25,10 @@ def find_elem(lst: list, value: (int, float)) -> int:
 
   if value not in lst:
     raise ValueError("value not in lst((")
+
+  if not isinstance(lst, list):
+    raise TypeError("why not list((")
+
   return lst.index(value)
 
 def count_occurrences(lst: list, value: (int, float)) -> int:
@@ -35,8 +39,10 @@ def count_occurrences(lst: list, value: (int, float)) -> int:
   :param value: искомое значение
   :return: количество или ошибка
   """
+  if not isinstance(lst, list):
+    raise TypeError("why not list((")
 
-  ...
+  return lst.count(value)
 
 def reverse_words(s: str) -> str:
   ...
