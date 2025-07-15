@@ -24,3 +24,10 @@ def test_positive_empty():
     result = hw1.count_occurrences(lst, value)
 
     assert result == expected, f"expected:{expected}, result: {result}"
+
+def test_negative_zero_entry():
+    lst = "string"
+    value = "t"
+
+    with pytest.raises(TypeError):
+        hw1.count_occurrences(lst, value)
