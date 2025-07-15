@@ -16,3 +16,11 @@ def test_positive_no_elem():
     result = hw1.count_occurrences(lst, value)
 
     assert result == expected, f"expected:{expected}, result: {result}"
+
+def test_positive_empty():
+    lst = []
+    value = 5
+    expected = 0
+    result = hw1.count_occurrences(lst, value)
+
+    assert result == expected, f"expected:{expected}, result: {result}"
