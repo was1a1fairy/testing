@@ -1,7 +1,7 @@
 import hw1
 
 
-def positive_one_entry():
+def test_positive_one_entry():
     text = "мне лень придумывать что писать"
     pattern = "лень"
     expected = 4
@@ -9,7 +9,7 @@ def positive_one_entry():
     result = hw1.find_substr(text, pattern)
     assert result == expected, f"expected: {expected}, result: {result}."
 
-def positive_two_entry():
+def test_positive_two_entry():
     text = "мне лень придумывать что писать, лень"
     pattern = "лень"
     expected = 4
@@ -17,8 +17,9 @@ def positive_two_entry():
     result = hw1.find_substr(text, pattern)
     assert result == expected, f"expected: {expected}, result: {result}."
 
-def negative_zero_entry():
-    text = "мне лень придумывать что писать"
-    pattern = "класс"
-    # ошибка
+# def test_negative_zero_entry():
+#     text = "мне лень придумывать что писать"
+#     pattern = "класс"
+#     # ошибка
 
+# positive_two_entry()

@@ -6,7 +6,12 @@ def find_substr(text:str, pattern:str) -> int:
   :param pattern: часть этой строки
   :return: индекс вхождения pattern в text, или ошибка
   """
-  ...
+
+  if pattern not in text:
+    raise ValueError("pattern not in text(")
+
+  return text.find(pattern)
+
 
 def find_elem(lst: list, value: (int, float)) -> int:
   ...
