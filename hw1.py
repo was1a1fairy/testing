@@ -15,10 +15,12 @@ def find_substr(text:str, pattern:str) -> int:
 
 def find_elem(lst: list, value: (int, float)) -> int:
   """
+  возвращает индекс первого вхождения элемента в список,
+  если такого нет, ошибка
 
-  :param lst:
-  :param value:
-  :return:
+  :param lst: список элементов
+  :param value: значение
+  :return: индекс
   """
   ...
 
