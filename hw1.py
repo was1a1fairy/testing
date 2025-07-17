@@ -74,5 +74,9 @@ def reverse_words(s: str) -> str:
   return new_s[:-1:]
 
 def is_palindrome(s: str) -> bool:
-  
-  ...
+  """
+  проверяет, является ли строка палиндромом
+  (игнорируя регистр и пробелы)
+  :param s:
+  :return:
+  """
