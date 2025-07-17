@@ -74,4 +74,5 @@ def reverse_words(s: str) -> str:
   return new_s[:-1:]
 
 def is_palindrome(s: str) -> bool:
+  
   ...

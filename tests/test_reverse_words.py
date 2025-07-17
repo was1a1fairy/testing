@@ -20,3 +20,7 @@ def test_one_word():
 def test_negative_empty():
     with pytest.raises(ValueError):
         hw1.reverse_words("")
+
+def test_another_type():
+    with pytest.raises(TypeError):
+        hw1.reverse_words(12345)
