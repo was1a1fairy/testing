@@ -7,3 +7,10 @@ def test_three_words():
     result = hw1.reverse_words(s)
 
     assert result == expected, f"{expected}, {result}"
+
+def test_one_word():
+    s = "мяу"
+    expected = "мяу"
+    result = hw1.reverse_words(s)
+
+    assert result == expected, f"{expected}, {result}"
