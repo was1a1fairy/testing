@@ -53,12 +53,25 @@ def count_occurrences(lst: list, value: (int, float)) -> int:
   return count
 
 def reverse_words(s: str) -> str:
+
   """
   меняет порядок слов в строке на обратный
-  :param s:
-  :return:
+  :param s:непустая строка
+  :return:слова этой строки в обратном порядке
   """
-  ...
+
+  if len(s) == 0: raise ValueError
+  if not isinstance(s, str):
+    raise TypeError
+
+  s = s.split(" ")
+  new_s = ""
+
+  for i in range(len(s)-1, -1, -1):
+    new_s += s[i]
+    new_s += " "
+
+  return new_s[:-1:]
 
 def is_palindrome(s: str) -> bool:
   ...
