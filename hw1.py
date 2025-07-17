@@ -77,6 +77,21 @@ def is_palindrome(s: str) -> bool:
   """
   проверяет, является ли строка палиндромом
   (игнорируя регистр и пробелы)
-  :param s:
-  :return:
+  :param s: любая строка
+  :return: true/false
   """
+
+  if not isinstance(s, str): raise TypeError
+  if len(s) == 0: raise ValueError
+
+  s = (s.replace(" ", "")).lower()
+
+  for i in range(len(s)):
+
+    if s[i] == s[-i-1]:
+      continue
+
+    else:
+      return False
+
+  return True
