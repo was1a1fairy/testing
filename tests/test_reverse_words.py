@@ -1,0 +1,9 @@
+import hw1
+
+
+def test_three_words():
+    s = "лень придумывать строку"
+    expected = "строку придумывать лень"
+    result = hw1.reverse_words(s)
+
+    assert result == expected, f"{expected}, {result}"

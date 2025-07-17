@@ -53,6 +53,11 @@ def count_occurrences(lst: list, value: (int, float)) -> int:
   return count
 
 def reverse_words(s: str) -> str:
+  """
+  меняет порядок слов в строке на обратный
+  :param s:
+  :return:
+  """
   ...
 
 def is_palindrome(s: str) -> bool:
