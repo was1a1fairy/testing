@@ -1,5 +1,5 @@
 import hw1
-
+import pytest
 
 def test_positive_upper_register():
     s = "Довод"
@@ -21,3 +21,7 @@ def test_positive_not_palindrome():
     result = hw1.is_palindrome(s)
 
     assert result == expected, f"{expected}, {result}"
+
+def test_another_type():
+    with pytest.raises(TypeError):
+        hw1.is_palindrome(12345)
