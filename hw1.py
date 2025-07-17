@@ -9,7 +9,7 @@ def find_substr(text:str, pattern:str) -> int:
 
   if pattern not in text:
     raise ValueError("pattern not in text(")
-
+  # не понимаю как не через find((
   return text.find(pattern)
 
 
@@ -23,15 +23,17 @@ def find_elem(lst: list, value: (int, float)) -> int:
   :return: индекс
   """
 
-  if value not in lst:
-    raise ValueError("value not in lst((")
-
   if not isinstance(lst, list):
     raise TypeError("why not list((")
 
-  return lst.index(value)
+  for i in range(len(lst)):
+    if lst[i] == value:
+      return i
+
+  raise ValueError("value not in lst((")
 
 def count_occurrences(lst: list, value: (int, float)) -> int:
+
   """
   ищет количество вхождений value в lst
 
@@ -39,10 +41,16 @@ def count_occurrences(lst: list, value: (int, float)) -> int:
   :param value: искомое значение
   :return: количество или ошибка
   """
+
   if not isinstance(lst, list):
     raise TypeError("why not list((")
 
-  return lst.count(value)
+  count = 0
+  for i in range(len(lst)):
+    if lst[i] == value:
+      count += 1
+
+  return count
 
 def reverse_words(s: str) -> str:
   ...
