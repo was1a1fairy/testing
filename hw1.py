@@ -9,8 +9,10 @@ def find_substr(text:str, pattern:str) -> int:
 
   if pattern not in text:
     raise ValueError("pattern not in text(")
-  # не понимаю как не через find((
-  return text.find(pattern)
+
+  for i in range(len(text)-len(pattern)):
+    if text[i:i+len(pattern)] == pattern:
+      return i
 
 
 def find_elem(lst: list, value: (int, float)) -> int:
@@ -88,10 +90,7 @@ def is_palindrome(s: str) -> bool:
 
   for i in range(len(s)):
 
-    if s[i] == s[-i-1]:
-      continue
-
-    else:
+    if s[i] != s[-i-1]:
       return False
 
   return True
