@@ -26,3 +26,7 @@ class Vector:
 
     def scalar_mul(self, other: Vector):
         return self.__x * other.get_x() + self.__y * other.get_y() + self.__z * other.get_z()
+
+    def angle_between(self, other: Vector):
+        return (self.scalar_mul(other))/(((self.__z**2 + self.__y**2 + self.__x**2)**0.5) * (other.get_y()**2 + other.get_x()**2 + other.get_z()**2)**0.5)
+
