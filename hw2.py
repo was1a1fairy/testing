@@ -20,3 +20,6 @@ class Vector:
 
     def add(self, other: Vector):
         return Vector(self.__x + other.get_x, self.__y + other.get_y, self.__z + other.get_z)
+
+    def sub(self, other: Vector):
+        return Vector(self.__x - other.get_x, self.__y - other.get_y, self.__z - other.get_z)
