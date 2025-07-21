@@ -23,3 +23,6 @@ class Vector:
 
     def sub(self, other: Vector):
         return Vector(self.__x - other.get_x, self.__y - other.get_y, self.__z - other.get_z)
+
+    def scalar_mul(self, other: Vector):
+        return self.__x * other.get_x() + self.__y * other.get_y() + self.__z * other.get_z()
