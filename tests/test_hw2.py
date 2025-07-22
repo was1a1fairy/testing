@@ -25,3 +25,8 @@ def test_add(vec1, vec2):
     assert vec1.add(vec2).get_x() == 3
     assert vec1.add(vec2).get_y() == 1
     assert vec1.add(vec2).get_z() == 9
+
+def test_sub(vec1, vec2):
+    assert vec1.sub(vec2).get_x() == 1
+    assert vec1.sub(vec2).get_y() == 5
+    assert vec1.sub(vec2).get_z() == 1
