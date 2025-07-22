@@ -20,3 +20,8 @@ def test_scalar_mul(vec1, vec2):
 
 def test_angle_between(vec1, vec2):
     assert vec1.angle_between(vec2) == 16 / ((38 ** 0.5) * (21 ** 0.5))
+
+def test_add(vec1, vec2):
+    assert vec1.add(vec2).get_x() == 3
+    assert vec1.add(vec2).get_y() == 1
+    assert vec1.add(vec2).get_z() == 9
