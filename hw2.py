@@ -60,3 +60,17 @@ class Vector:
 
     def random_vector(self):
         return Vector(random.randint(1,10), random.randint(1,10), random.randint(1,10))
+
+class Circle:
+
+    def __init__(self, r: int):
+        self.__r = r
+
+    def area(self):
+        return math.pi * self.__r**2
+
+    def circumference(self):
+        return 2 * math.pi * self.__r
+
+    def diameter(self):
+        return 2 * self.__r
