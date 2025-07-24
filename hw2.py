@@ -63,14 +63,17 @@ class Vector:
 
 class Circle:
 
-    def __init__(self, r: int):
+    def __init__(self, r: int|float):
+        if not isinstance(r, int|float):  raise TypeError
+        if r <= 0: raise ValueError
         self.__r = r
+        self.__diameter = 2 * self.__r
+
+    def get_diameter(self):
+        return self.__diameter
 
     def area(self):
         return math.pi * self.__r**2
 
     def circumference(self):
         return 2 * math.pi * self.__r
-
-    def diameter(self):
-        return 2 * self.__r
