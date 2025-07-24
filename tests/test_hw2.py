@@ -1,4 +1,5 @@
 from hw2 import Vector
+from hw2 import Circle
 import pytest
 import math
 
@@ -117,3 +118,46 @@ def test_sub_negative(vec6_k, vec7_k):
     assert vec6_k.sub(vec7_k).get_x() == -4
     assert vec6_k.sub(vec7_k).get_y() == -6
     assert vec6_k.sub(vec7_k).get_z() == -8
+
+@pytest.mark.parametrize(
+    "r, expected",
+    [[0, ValueError],
+     [-1, ValueError],
+     [-1.5, ValueError],
+     ["abc", TypeError]
+     ])
+
+def test_create_circle(r, expected):
+    with pytest.raises(expected):
+        Circle(r)
+
+@pytest.mark.parametrize(
+    "r, expected",
+    [[1, math.pi],
+     [2, 4 * math.pi],
+     ])
+
+def test_area_circle(r, expected):
+    assert Circle(r).area() == expected
+
+
+@pytest.mark.parametrize(
+    "r, expected",
+    [[1, 2 * math.pi],
+     [2.5, 5 * math.pi],
+     [10, 20 * math.pi]
+     ])
+
+def test_circumference(r, expected):
+    assert Circle(r).circumference() == expected
+
+@pytest.mark.parametrize(
+    "r, expected",
+    [[1, 2],
+     [2, 4],
+     [1.5, 3],
+     [4, 8]
+     ])
+
+def test_diameter(r, expected):
+    assert Circle(r).get_diameter() == expected
